@@ -1,0 +1,7 @@
+#!/bin/bash
+# Scheme installer for amd64 with appropriate dependencies (at least for me)
+#plz don't mog berkeley's site
+
+curl -o STk-4.0.1-ucb1.3.6.i386.rpm http://wla.berkeley.edu/~scheme/precompiled/Linux/STk-4.0.1-ucb1.3.6.i386.rpm
+sudo apt install alien ksh libsm6:i386
+sudo alien -i --target=amd64 STk-4.0.1-ucb1.3.6.i386.rpm
